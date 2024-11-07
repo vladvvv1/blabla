@@ -13,6 +13,7 @@ def main():
     choose_the_option()
     view()
     remove()
+    info()
     add()
 
 
@@ -25,7 +26,8 @@ def choose_the_option():
               "\t\t\t1) view tasks\n"
               "\t\t\t2) remove tasks\n"
               "\t\t\t3) add tasks\n"
-              "\t\t\t4) quit\n"
+              "\t\t\t4) info about admin\n"
+              "\t\t\t5) quit\n"
               "\t\t\t--------------------")
 
         try:
@@ -37,9 +39,11 @@ def choose_the_option():
             elif option == 3:
                 add()
             elif option == 4:
+                info()
+            elif option == 5:
                 sys.exit()
         except ValueError:
-            print("Invalid input. Please enter a number (1-4).")
+            print("Invalid input. Please enter a number (1-4)")
 
 def view():
     # This function will output to-do list and go back to choose_the_option()
@@ -52,6 +56,10 @@ def view():
         for index, task in enumerate(Todo_list, start=1):
             print(f"{index}) {task}")
 
+def info():
+    # this method will introduce player about me.
+    print("My name is Default_69.")
+    print("\nThis is my first console program. I will be happy.\n")
 
 def remove():
     # Half program is alike to view().
